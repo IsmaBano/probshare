@@ -1,0 +1,20 @@
+<%- include('partials/header') %>
+
+
+<div class="m-3 p-2">
+<form action="/submit" method="post" class="text-center ">
+    <input type="text" text="bg-white" name="text" placeholder=" What do you want to share? " autocomplete="off" class="text-white text-center bg-gray-600 font-[200]  h-[60px] rounded-[5px] w-[60%] ">
+    <button class="bg-gray-700 min-h-[50px] w-[50px] text-white rounded-full font-bold mx-2" value="" name="button" type="submit">+</button>
+</form>
+</div>
+
+<div class="bg-gray-600 text-white text-xl px-6 m-4  py-2  rounded-sm">
+    <p>I love fictional men.</p>
+</div>
+
+ <% usersWithsecrets.forEach(function(user){ %>
+   <% for(let i=0;i<user.secrets.length;i++) { %>
+    <div class="bg-gray-600 text-white text-xl px-6 m-4  py-2  rounded-sm">
+        <p><%= user.secrets[i] %></p>
+    </div>
+ <%}}); %>
