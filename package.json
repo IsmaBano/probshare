@@ -4,10 +4,11 @@
   "description": "",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node app.js",
-    "style": "npx tailwindcss -i ./public/src/input.css -o ./public/src/output.css --watch"
-  },
+  "test": "echo \"Error: no test specified\" && exit 1",
+  "start": "node app.js",
+  "build:css": "npx tailwindcss -i ./public/src/input.css -o ./public/src/output.css --minify",
+  "style": "npx tailwindcss -i ./public/src/input.css -o ./public/src/output.css --watch"
+},
   "author": "",
   "license": "ISC",
   "dependencies": {
